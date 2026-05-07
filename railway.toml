@@ -7,4 +7,4 @@ healthcheckPath = "/api/health"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
-startCommand = "/calcom/scripts/start.sh"
+startCommand = "cd /calcom && node_modules/.bin/prisma migrate deploy --schema packages/prisma/schema.prisma && /calcom/scripts/start.sh"
